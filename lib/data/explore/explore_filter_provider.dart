@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:fred_app/data/explore/explore_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../features/explore/models/explore.dart';
 import '../../globals/models/filter.dart';
+import 'explore_spots_provider.dart';
 
-final filterProvider = ChangeNotifierProvider<FilterProvider>(
-  (ref) => FilterProvider(
+final filterProvider = ChangeNotifierProvider<ExploreFilterProvider>(
+  (ref) => ExploreFilterProvider(
     allSpots: ref.read(spotsProvider).spots,
   ),
 );
 
-class FilterProvider extends ChangeNotifier {
+class ExploreFilterProvider extends ChangeNotifier {
   final List<Spot> allSpots;
-  FilterProvider({
+  ExploreFilterProvider({
     required this.allSpots,
   });
 

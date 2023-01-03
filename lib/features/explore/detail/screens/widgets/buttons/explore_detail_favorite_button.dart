@@ -16,7 +16,7 @@ class ExploreDetailFavoriteButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isFavorite = ref
         .watch(userFavoritesProvider)
-        .getSingleUserFavorite(userId: "Robin", exploreId: id);
+        .getUserFavoriteSpotState(userId: "Robin", exploreId: id);
 
     return ExploreDetailButton(
       text: isFavorite ? "Tillagd i favoriter" : "Lägg till i favoriter",
@@ -26,7 +26,7 @@ class ExploreDetailFavoriteButton extends ConsumerWidget {
       iconColor: CustomColors.brand,
       onPressed: () => ref
           .read(userFavoritesProvider)
-          .updateUserFavorite(userId: "Robin", exploreId: id),
+          .setUserFavoriteSpotState(userId: "Robin", exploreId: id),
     );
   }
 }

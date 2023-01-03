@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:fred_app/cms/cms_favorite.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final favoritesViewSelectionController =
@@ -8,13 +9,13 @@ final favoritesViewSelectionController =
 
 class FavoritesViewSelectionController extends ChangeNotifier {
   final Map<String, Widget> viewWidgets = {
-    "Ej besökta": const SizedBox(),
-    "Besökta": const SizedBox(),
+    CMSFavorite.firstTab: const SizedBox(),
+    CMSFavorite.secondTab: const SizedBox(),
   };
 
   Map<String, bool> viewState = {
-    "Ej besökta": true,
-    "Besökta": false,
+    CMSFavorite.firstTab: true,
+    CMSFavorite.secondTab: false,
   };
 
   void updateSelectedView({required String view}) {
@@ -24,9 +25,7 @@ class FavoritesViewSelectionController extends ChangeNotifier {
     notifyListeners();
   }
 
-  Widget getSelectedView() {
-    MapEntry<String, bool> selectedView =
-        viewState.entries.firstWhere((element) => element.value == true);
-    return viewWidgets[selectedView.key]!;
+  String getSelectedViewName() {
+    return viewState.entries.firstWhere((element) => element.value == true).key;
   }
 }

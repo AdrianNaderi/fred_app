@@ -3,9 +3,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../features/explore/models/explore.dart';
 
-final spotsProvider = Provider<ExploreProvider>((ref) => ExploreProvider());
+final spotsProvider = Provider<SpotsProvider>((ref) => SpotsProvider());
 
-class ExploreProvider extends ChangeNotifier {
+class SpotsProvider extends ChangeNotifier {
   final List<Spot> _spots = [
     const Spot(
       id: "001",
