@@ -21,7 +21,7 @@ class ExploreViewListBuilder extends ConsumerWidget {
         itemCount: filteredSpots.length,
         itemBuilder: (context, index) => GestureDetector(
           onTap: () => context.pushRoute(
-            MVPExploreDetailRoute(id: filteredSpots[index].id),
+            ExploreDetailRoute(id: filteredSpots[index].id),
           ),
           child: ExploreViewListItem(id: filteredSpots[index].id),
         ),

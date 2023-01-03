@@ -8,7 +8,7 @@ import '../../explore/models/explore.dart';
 
 final favoriteFilterController = ChangeNotifierProvider(
   (ref) => FavoriteFilterController(
-      allSpots: ref.read(mvpexploreProvider).mvpSpots,
+      allSpots: ref.read(spotsProvider).spots,
       userFilters: ref.read(userFilterProvider).favoriteTagFilters),
 );
 

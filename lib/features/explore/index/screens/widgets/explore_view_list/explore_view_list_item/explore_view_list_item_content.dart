@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fred_app/data/explore/explore_provider.dart';
-
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../../../../globals/widgets/text/custom_normaltext.dart';
@@ -12,7 +11,7 @@ class ExploreViewListItemContent extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    Spot spot = ref.read(mvpexploreProvider).mvpSpots.firstWhere(
+    Spot spot = ref.read(spotsProvider).spots.firstWhere(
           (element) => element.id == id,
         );
     return Expanded(

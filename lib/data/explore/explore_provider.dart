@@ -3,11 +3,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../features/explore/models/explore.dart';
 
-final mvpexploreProvider =
-    Provider<MVPExploreProvider>((ref) => MVPExploreProvider());
+final spotsProvider = Provider<ExploreProvider>((ref) => ExploreProvider());
 
-class MVPExploreProvider extends ChangeNotifier {
-  final List<Spot> _mvpspots = [
+class ExploreProvider extends ChangeNotifier {
+  final List<Spot> _spots = [
     const Spot(
       id: "001",
       name: "Brännerian",
@@ -42,10 +41,10 @@ class MVPExploreProvider extends ChangeNotifier {
     )
   ];
 
-  List<Spot> get mvpSpots => [..._mvpspots];
+  List<Spot> get spots => [..._spots];
 
   List<Spot> getUserFavoriteSpots({required List<String> userFavorites}) {
-    return mvpSpots
+    return spots
         .where((element) => userFavorites.contains(element.id))
         .toList();
   }

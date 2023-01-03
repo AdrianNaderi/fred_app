@@ -7,8 +7,8 @@ import 'package:fred_app/globals/constants/dimensions.dart';
 import 'package:fred_app/globals/widgets/spacer.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../../../../globals/constants/colors_fonts/colors.dart';
-import '../../../../../../../globals/widgets/text/custom_boldtext.dart';
+import '../../../../../../globals/constants/colors_fonts/colors.dart';
+import '../../../../../../globals/widgets/text/custom_boldtext.dart';
 
 class CustomTextField extends HookConsumerWidget {
   final String name;

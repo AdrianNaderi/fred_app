@@ -6,9 +6,9 @@ import '../../../../../../globals/constants/colors_fonts/colors.dart';
 import '../../../../../../globals/widgets/text/custom_boldtext.dart';
 import '../../../../../../globals/widgets/text/custom_normaltext.dart';
 
-class MVPExploreDetailHeaderContent extends ConsumerWidget {
+class ExploreDetailHeaderContent extends ConsumerWidget {
   final String id;
-  const MVPExploreDetailHeaderContent({super.key, required this.id});
+  const ExploreDetailHeaderContent({super.key, required this.id});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

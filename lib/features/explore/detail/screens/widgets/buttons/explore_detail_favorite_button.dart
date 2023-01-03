@@ -18,7 +18,7 @@ class ExploreDetailFavoriteButton extends ConsumerWidget {
         .watch(userFavoritesProvider)
         .getSingleUserFavorite(userId: "Robin", exploreId: id);
 
-    return MVPExploreDetailButton(
+    return ExploreDetailButton(
       text: isFavorite ? "Tillagd i favoriter" : "Lägg till i favoriter",
       textSize: 14,
       icon: isFavorite ? CupertinoIcons.star_fill : CupertinoIcons.star,

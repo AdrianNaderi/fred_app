@@ -5,9 +5,9 @@ import '../../../../../../globals/constants/marpad.dart';
 import '../../../../../../globals/widgets/spacer.dart';
 import 'explore_detail_image.dart';
 
-class MVPExploreDetailImages extends ConsumerWidget {
+class ExploreDetailImages extends ConsumerWidget {
   final String id;
-  const MVPExploreDetailImages({
+  const ExploreDetailImages({
     super.key,
     required this.id,
   });
@@ -25,7 +25,7 @@ class MVPExploreDetailImages extends ConsumerWidget {
         scrollDirection: Axis.horizontal,
         separatorBuilder: (context, index) => CustomSpacer.w8,
         itemCount: 3,
-        itemBuilder: (context, index) => const MVPExploreDetailImage(
+        itemBuilder: (context, index) => const ExploreDetailImage(
           width: imageWidth,
         ),
       ),

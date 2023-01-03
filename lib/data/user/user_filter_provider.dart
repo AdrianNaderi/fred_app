@@ -10,7 +10,7 @@ import 'user_visited_provider.dart';
 
 final userFilterProvider = ChangeNotifierProvider<UserFilterProvider>(
   (ref) => UserFilterProvider(
-      allSpots: ref.read(mvpexploreProvider).mvpSpots,
+      allSpots: ref.read(spotsProvider).spots,
       userFavoritesId: ref.watch(userFavoritesProvider).getAllUserFavorites(
             userId: "Robin",
           ),
@@ -52,9 +52,7 @@ class UserFilterProvider extends ChangeNotifier {
         : favoriteVisitedTagFilters
             .firstWhere((element) => element.name == filter.name)
             .filter = !filter.filter;
-    print(favoriteNotVisitedTagFilters
-        .firstWhere((element) => element.name == filter.name)
-        .filter);
+
     notifyListeners();
   }
 

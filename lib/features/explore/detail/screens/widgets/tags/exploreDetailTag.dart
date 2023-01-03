@@ -7,9 +7,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../../../globals/widgets/text/custom_normaltext.dart';
 
-class MVPExploreDetailTag extends ConsumerWidget {
+class ExploreDetailTag extends ConsumerWidget {
   final String tag;
-  const MVPExploreDetailTag({super.key, required this.tag});
+  const ExploreDetailTag({super.key, required this.tag});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

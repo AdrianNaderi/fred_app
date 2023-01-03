@@ -18,7 +18,7 @@ class ExploreDetailVisitButton extends ConsumerWidget {
         .watch(userVisitedProvider)
         .getSingleUserVisited(userId: "Robin", exploreId: id);
 
-    return MVPExploreDetailButton(
+    return ExploreDetailButton(
       text: hasVisited ? "Har besökt" : "Ej besökt",
       textSize: 14,
       icon: hasVisited

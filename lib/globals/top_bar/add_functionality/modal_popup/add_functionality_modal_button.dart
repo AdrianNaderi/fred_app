@@ -4,11 +4,11 @@ import 'package:fred_app/globals/constants/decoration/border_radius.dart';
 import 'package:fred_app/globals/constants/marpad.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../../../../globals/widgets/text/custom_normaltext.dart';
+import '../../../../../globals/widgets/text/custom_normaltext.dart';
 
-class CustomAddButton extends ConsumerWidget {
+class AddFunctionalityButton extends ConsumerWidget {
   final Function()? onPressed;
-  const CustomAddButton({
+  const AddFunctionalityButton({
     super.key,
     required this.onPressed,
   });

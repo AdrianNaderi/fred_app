@@ -32,7 +32,7 @@ class FavoritesViewListBuilder extends ConsumerWidget {
         itemCount: viewData.length,
         itemBuilder: (context, index) => GestureDetector(
           onTap: () => context.pushRoute(
-            MVPExploreDetailRoute(id: viewData[index].id),
+            ExploreDetailRoute(id: viewData[index].id),
           ),
           child: ExploreViewListItem(id: viewData[index].id),
         ),

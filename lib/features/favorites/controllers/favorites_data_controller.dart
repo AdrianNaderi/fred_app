@@ -8,7 +8,7 @@ import '../../explore/models/explore.dart';
 
 final favoritesDataController = Provider<FavoritesDataController>(
   (ref) => FavoritesDataController(
-      allSpots: ref.read(mvpexploreProvider).mvpSpots,
+      allSpots: ref.read(spotsProvider).spots,
       userFavortiesId:
           ref.watch(userFavoritesProvider).getAllUserFavorites(userId: "Robin"),
       userVisitedId:

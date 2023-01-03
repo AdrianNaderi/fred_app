@@ -7,6 +7,7 @@ class CustomTabs {
   static List<PageRouteInfo<dynamic>> routes = [
     const ExploreTab(),
     const FavoriteTab(),
+    const FriendsTab()
   ];
 
   static List<BottomNavigationBarItem> items = const [
@@ -18,12 +19,16 @@ class CustomTabs {
       icon: Icon(Icons.favorite),
       label: "Favoriter",
     ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.people),
+      label: "Vänner",
+    ),
   ];
 
 // //screens for each tab
 //   static const _selectedTab = [
-//     MVPExploreScreen(),
-//     MVPFavoritesScreen(),
+//     ExploreScreen(),
+//     FavoritesScreen(),
 //   ];
 
 // //builds right tab

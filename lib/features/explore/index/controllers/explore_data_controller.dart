@@ -7,7 +7,7 @@ import '../../models/explore.dart';
 final exploreDataController = Provider((ref) => ExploreDataController());
 
 class ExploreDataController extends ChangeNotifier {
-  final ExploreData = MVPExploreProvider().mvpSpots;
+  final ExploreData = ExploreProvider().spots;
 
   //GETTERS
   Spot getSpotById(String id) {

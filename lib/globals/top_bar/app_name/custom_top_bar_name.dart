@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../constants/colors_fonts/colors.dart';
-import '../../../widgets/text/custom_boldtext.dart';
+import '../../constants/colors_fonts/colors.dart';
+import '../../widgets/text/custom_boldtext.dart';
 
 class CustomTopBarName extends ConsumerWidget {
   const CustomTopBarName({super.key});

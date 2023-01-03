@@ -8,7 +8,7 @@ import '../../models/explore.dart';
 
 final exploreFilterController = ChangeNotifierProvider(
   (ref) => ExploreFilterController(
-      allSpots: ref.read(mvpexploreProvider).mvpSpots,
+      allSpots: ref.read(spotsProvider).spots,
       allFilters: ref.read(filterProvider).listOfTagFilters),
 );
 

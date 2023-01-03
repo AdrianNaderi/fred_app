@@ -3,10 +3,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../constants/colors_fonts/colors.dart';
 import '../../constants/decoration/border_radius.dart';
-import 'modal_popup/custom_top_bar_modal_popup.dart';
+import 'modal_popup/add_functionality_modal.dart';
 
-class CustomNavBarTrailing extends ConsumerWidget {
-  const CustomNavBarTrailing({super.key});
+class AddFunctionalityIcon extends ConsumerWidget {
+  const AddFunctionalityIcon({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -14,7 +14,7 @@ class CustomNavBarTrailing extends ConsumerWidget {
       onTap: () => showCupertinoModalPopup(
         context: context,
         builder: (context) {
-          return const CustomTopBarModalPopUp();
+          return const AddFunctionalityModal();
         },
       ),
       child: Container(

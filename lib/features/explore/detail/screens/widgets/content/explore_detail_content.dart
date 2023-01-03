@@ -6,9 +6,9 @@ import '../../../../../../globals/widgets/spacer.dart';
 import '../../../../../../globals/widgets/text/custom_boldtext.dart';
 import '../../../../../../globals/widgets/text/custom_normaltext.dart';
 
-class MVPExploreDetailContent extends ConsumerWidget {
+class ExploreDetailContent extends ConsumerWidget {
   final String id;
-  const MVPExploreDetailContent({
+  const ExploreDetailContent({
     super.key,
     required this.id,
   });

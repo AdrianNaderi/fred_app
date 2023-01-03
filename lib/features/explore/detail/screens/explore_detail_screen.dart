@@ -10,10 +10,10 @@ import '../../../../route/named_routes.dart';
 import 'widgets/header/explore_detail_header.dart';
 import 'widgets/images/explore_detail_image_builder.dart';
 
-class MVPExploreDetailScreen extends ConsumerWidget {
+class ExploreDetailScreen extends ConsumerWidget {
   static const String routeName = NamedRoutes.toExploreDetail;
   final String id;
-  const MVPExploreDetailScreen({
+  const ExploreDetailScreen({
     super.key,
     required this.id,
   });
@@ -24,23 +24,23 @@ class MVPExploreDetailScreen extends ConsumerWidget {
         child: Column(
           children: [
             //header
-            MVPExploreDetailHeader(id: id),
+            ExploreDetailHeader(id: id),
             //body
             Padding(
               padding: CustomPadding.horDefault,
               child: Column(
                 children: [
                   CustomSpacer.hDefault,
-                  MVPExploreDetailButtons(id: id),
+                  ExploreDetailButtons(id: id),
                   CustomSpacer.hDefault,
-                  MVPExploreDetailContent(id: id),
+                  ExploreDetailContent(id: id),
                   CustomSpacer.hDefault,
-                  MVPExploreDetailTagBuilder(id: id),
+                  ExploreDetailTagBuilder(id: id),
                   CustomSpacer.hDefault,
                 ],
               ),
             ),
-            MVPExploreDetailImages(id: id),
+            ExploreDetailImages(id: id),
           ],
         ),
       ),
