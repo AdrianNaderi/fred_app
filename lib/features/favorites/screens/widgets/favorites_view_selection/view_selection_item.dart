@@ -19,9 +19,6 @@ class TopBarSelectionItem extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final itemState =
         ref.watch(favoritesViewSelectionController).viewState[text]!;
-
-    final Color stateColor =
-        itemState ? CustomColors.brand : CustomColors.brand.withOpacity(0);
     return GestureDetector(
       onTap: () => ref
           .read(favoritesViewSelectionController)
@@ -30,7 +27,7 @@ class TopBarSelectionItem extends ConsumerWidget {
         alignment: Alignment.center,
         padding: CustomPadding.verHorButton,
         decoration: BoxDecoration(
-          color: stateColor,
+          color: itemState ? CustomColors.brand : CustomColors.brand.withOpacity(0),
           borderRadius: CustomBorderRadius.rDefault,
         ),
         child: CustomBoldText(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fred_app/data/explore/explore_spots_provider.dart';
 import 'package:fred_app/data/explore/explore_filter_provider.dart';
+import 'package:fred_app/data/explore/explore_spots_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../globals/models/filter.dart';
@@ -37,7 +37,7 @@ class ExploreFilterController extends ChangeNotifier {
   }
 
   //SETTERS
-  void toggleFilter(Filter filter) {
+  void setFilterState(Filter filter) {
     allFilters.firstWhere((element) => element.name == filter.name).filter =
         !filter.filter;
 

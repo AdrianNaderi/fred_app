@@ -22,7 +22,7 @@ class ExploreFilterListBuilder extends ConsumerWidget {
           onTap: () {
             return ref
                 .read(exploreFilterController)
-                .toggleFilter(tags.elementAt(index));
+                .setFilterState(tags.elementAt(index));
           },
           child: ExploreFilterListItem(
             tag: tags.elementAt(index),

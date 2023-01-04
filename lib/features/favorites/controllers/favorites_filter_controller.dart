@@ -27,6 +27,40 @@ class FavoritesFilterController extends ChangeNotifier {
     required this.secondTabFilters,
   });
 
+  List<Spot> get firstTabSpotsFiltered {
+    List<Spot> filteredSpots = [];
+    List<String> filterNames = firstTabFilters
+        .where((element) => element.filter == true)
+        .toList()
+        .map((e) => e.name)
+        .toList();
+    for (Spot spot in firstTabSpots) {
+      if (filterNames.isEmpty) {
+        filteredSpots = firstTabSpots;
+      } else if (filterNames.any((element) => spot.tags.contains(element))) {
+        filteredSpots.add(spot);
+      }
+    }
+    return filteredSpots;
+  }
+
+  List<Spot> get secondTabSpotsFiltered {
+    List<Spot> filteredSpots = [];
+    List<String> filterNames = secondTabFilters
+        .where((element) => element.filter == true)
+        .toList()
+        .map((e) => e.name)
+        .toList();
+    for (Spot spot in secondTabSpots) {
+      if (filterNames.isEmpty) {
+        filteredSpots = secondTabSpots;
+      } else if (filterNames.any((element) => spot.tags.contains(element))) {
+        filteredSpots.add(spot);
+      }
+    }
+    return filteredSpots;
+  }
+
   void setFilterState(Filter filter, String selectedView) {
     selectedView == CMSFavorite.firstTab
         ? firstTabFilters

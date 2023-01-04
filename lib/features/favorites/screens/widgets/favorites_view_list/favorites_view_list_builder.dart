@@ -21,8 +21,8 @@ class FavoritesViewListBuilder extends ConsumerWidget {
     List<Spot> spots = ref
             .watch(favoritesViewSelectionController)
             .viewState[CMSFavorite.firstTab]!
-        ? ref.watch(favoritesFilterController).firstTabSpots
-        : ref.watch(favoritesFilterController).secondTabSpots;
+        ? ref.watch(favoritesFilterController).firstTabSpotsFiltered
+        : ref.watch(favoritesFilterController).secondTabSpotsFiltered;
 
     return Expanded(
       child: ListView.separated(
