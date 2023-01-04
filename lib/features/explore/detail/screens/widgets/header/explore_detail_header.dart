@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../../../globals/constants/dimensions.dart';
 import '../../../../../../globals/widgets/buttons/customBackButton.dart';
+import '../../../../index/controllers/explore_data_controller.dart';
 import 'explore_detail_header_background.dart';
 import 'explore_detail_header_content.dart';
 
@@ -13,6 +14,7 @@ class ExploreDetailHeader extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final spot = ref.read(exploreDataController).getSpotById(id);
     return Stack(
       alignment: Alignment.center,
       children: [
@@ -36,9 +38,7 @@ class ExploreDetailHeader extends ConsumerWidget {
             right: appPadding,
             child: GestureDetector(
               onTap: () {},
-              child: Image.asset(
-                "assets/icons/profile.png",
-              ),
+              child: Image.asset("assets/icons/profile.png"),
             ))
       ],
     );

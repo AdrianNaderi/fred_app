@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:fred_app/features/home/controllers/input_validation_controller.dart';
-import 'package:fred_app/features/home/controllers/new_spot_controller.dart';
+import 'package:fred_app/features/bottom_tabs/controllers/input_validation_controller.dart';
+import 'package:fred_app/features/bottom_tabs/controllers/new_spot_controller.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../globals/constants/colors_fonts/colors.dart';

@@ -6,7 +6,7 @@ import '../../../constants/colors_fonts/colors.dart';
 import '../../../constants/decoration/border_radius.dart';
 import '../../../constants/dimensions.dart';
 import '../../../widgets/spacer.dart';
-import '../../../widgets/text/custom_boldtext.dart';
+import '../../../widgets/text/custom_bold_text.dart';
 
 class AddFunctionalityTextField extends HookConsumerWidget {
   const AddFunctionalityTextField({super.key});

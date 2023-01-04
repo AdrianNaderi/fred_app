@@ -8,18 +8,22 @@ class CustomNormalText extends StatelessWidget {
   final double size;
   final Color color;
   final TextAlign textAlign;
-  const CustomNormalText(
-      {super.key,
-      required this.text,
-      required this.size,
-      this.color = CustomColors.primary,
-      this.textAlign = TextAlign.start});
+  final FontStyle fontStyle;
+  const CustomNormalText({
+    super.key,
+    required this.text,
+    required this.size,
+    this.color = CustomColors.primary,
+    this.textAlign = TextAlign.start,
+    this.fontStyle = FontStyle.normal,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
       style: TextStyle(
+        fontStyle: fontStyle,
         fontSize: size * tF,
         color: color,
       ),

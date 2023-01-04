@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:fred_app/features/home/controllers/input_validation_controller.dart';
-import 'package:fred_app/features/home/controllers/new_spot_controller.dart';
+import 'package:fred_app/features/bottom_tabs/controllers/input_validation_controller.dart';
+import 'package:fred_app/features/bottom_tabs/controllers/new_spot_controller.dart';
 import 'package:fred_app/globals/constants/decoration/border_radius.dart';
 import 'package:fred_app/globals/constants/dimensions.dart';
 import 'package:fred_app/globals/widgets/spacer.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../../../globals/constants/colors_fonts/colors.dart';
-import '../../../../../../globals/widgets/text/custom_boldtext.dart';
+import '../../../../widgets/text/custom_bold_text.dart';
 
 class CustomTextField extends HookConsumerWidget {
   final String name;

@@ -5,7 +5,7 @@ import 'package:fred_app/globals/constants/marpad.dart';
 import 'package:fred_app/globals/models/filter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../../globals/widgets/text/custom_normaltext.dart';
+import '../../../../../globals/widgets/text/custom_normal_text.dart';
 
 class FavoriteFilterListItem extends ConsumerWidget {
   final Filter tag;

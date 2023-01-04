@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fred_app/data/explore/explore_spots_provider.dart';
+import 'package:fred_app/data/spots/spots_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../features/explore/models/explore.dart';
+import '../../globals/models/spot.dart';
 
 final userFavoritesProvider = ChangeNotifierProvider<UserFavoritesProvider>(
   (ref) => UserFavoritesProvider(allSpots: ref.read(spotsProvider).spots),

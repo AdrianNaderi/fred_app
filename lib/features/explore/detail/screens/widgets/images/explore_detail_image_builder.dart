@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:fred_app/features/explore/index/controllers/explore_data_controller.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../../../globals/constants/marpad.dart';
@@ -17,15 +18,18 @@ class ExploreDetailImages extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return SizedBox(
+    final spot = ref.read(exploreDataController).getSpotById(id);
+    return Container(
+      alignment: Alignment.center,
       height: imageHeight, //styr höjd
       child: ListView.separated(
         padding: CustomPadding.leftDefault,
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         separatorBuilder: (context, index) => CustomSpacer.w8,
-        itemCount: 3,
-        itemBuilder: (context, index) => const ExploreDetailImage(
+        itemCount: spot.media.images.length,
+        itemBuilder: (context, index) => ExploreDetailImage(
+          image: spot.media.images[index],
           width: imageWidth,
         ),
       ),

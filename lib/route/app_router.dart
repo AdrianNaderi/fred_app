@@ -5,7 +5,7 @@ import 'package:fred_app/features/favorites/screens/favorites_screen.dart';
 import 'package:fred_app/features/friends/index/screens/friends_screen.dart';
 
 import '../features/explore/index/screens/explore_screen.dart';
-import '../features/home/screens/home_screen.dart';
+import '../features/bottom_tabs/screens/home_screen.dart';
 
 @CupertinoAutoRouter(
   replaceInRouteName: "Screen,Route",

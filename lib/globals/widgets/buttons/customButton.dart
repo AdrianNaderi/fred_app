@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../constants/marpad.dart';
-import '../text/custom_normaltext.dart';
+import '../text/custom_normal_text.dart';
 
 class CustomButton extends ConsumerWidget {
   final String text;

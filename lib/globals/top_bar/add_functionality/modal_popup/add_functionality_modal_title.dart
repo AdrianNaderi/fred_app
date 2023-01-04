@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../widgets/text/custom_boldtext.dart';
+import '../../../widgets/text/custom_bold_text.dart';
 
 class AddFunctionalityTitle extends HookConsumerWidget {
   const AddFunctionalityTitle({super.key});

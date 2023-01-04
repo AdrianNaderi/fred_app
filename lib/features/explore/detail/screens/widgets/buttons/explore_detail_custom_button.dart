@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../../../globals/widgets/spacer.dart';
-import '../../../../../../globals/widgets/text/custom_normaltext.dart';
+import '../../../../../../globals/widgets/text/custom_normal_text.dart';
 
 class ExploreDetailButton extends ConsumerWidget {
   final String text;

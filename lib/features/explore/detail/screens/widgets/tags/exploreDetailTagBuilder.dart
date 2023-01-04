@@ -6,18 +6,22 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class ExploreDetailTagBuilder extends ConsumerWidget {
   final String id;
-  const ExploreDetailTagBuilder({super.key, required this.id});
+  const ExploreDetailTagBuilder({
+    super.key,
+    required this.id,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final exploreTags = ref.read(exploreDataController).getSpotById(id).tags;
+    final tags = ref.read(exploreDataController).getSpotById(id).content.tags;
     return Wrap(
+      alignment: WrapAlignment.spaceBetween,
       spacing: appPadding / 2,
       runSpacing: appPadding / 2,
       children: [
-        for (int i = 0; i < exploreTags.length; i++)
+        for (int i = 0; i < tags.length; i++)
           ExploreDetailTag(
-            tag: exploreTags[i],
+            tag: tags[i],
           ),
       ],
     );

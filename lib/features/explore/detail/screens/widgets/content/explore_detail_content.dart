@@ -3,8 +3,8 @@ import 'package:fred_app/features/explore/index/controllers/explore_data_control
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../../../globals/widgets/spacer.dart';
-import '../../../../../../globals/widgets/text/custom_boldtext.dart';
-import '../../../../../../globals/widgets/text/custom_normaltext.dart';
+import '../../../../../../globals/widgets/text/custom_bold_text.dart';
+import '../../../../../../globals/widgets/text/custom_normal_text.dart';
 
 class ExploreDetailContent extends ConsumerWidget {
   final String id;
@@ -15,13 +15,13 @@ class ExploreDetailContent extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final explore = ref.read(exploreDataController).getSpotById(id);
+    final spot = ref.read(exploreDataController).getSpotById(id);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CustomBoldText(text: explore.title, size: 32),
+        CustomBoldText(text: spot.content.title, size: 32),
         CustomSpacer.hDefault,
-        CustomNormalText(text: explore.description, size: 14),
+        CustomNormalText(text: spot.content.description, size: 14),
       ],
     );
   }

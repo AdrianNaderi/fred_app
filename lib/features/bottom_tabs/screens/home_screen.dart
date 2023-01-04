@@ -1,7 +1,7 @@
 // import packages
 import 'package:auto_route/auto_route.dart';
 import "package:flutter/cupertino.dart";
-import 'package:fred_app/features/home/screens/widgets/tabs/custom_tabs.dart';
+import 'package:fred_app/features/bottom_tabs/screens/widgets/tabs/custom_tabs.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../globals/constants/colors_fonts/colors.dart';

@@ -20,7 +20,7 @@ import '../features/explore/detail/screens/explore_detail_screen.dart' as _i4;
 import '../features/explore/index/screens/explore_screen.dart' as _i3;
 import '../features/favorites/screens/favorites_screen.dart' as _i5;
 import '../features/friends/index/screens/friends_screen.dart' as _i6;
-import '../features/home/screens/home_screen.dart' as _i1;
+import '../features/bottom_tabs/screens/home_screen.dart' as _i1;
 
 class AppRouter extends _i7.RootStackRouter {
   AppRouter([_i8.GlobalKey<_i8.NavigatorState>? navigatorKey])

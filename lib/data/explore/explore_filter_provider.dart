@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../features/explore/models/explore.dart';
 import '../../globals/models/filter.dart';
-import 'explore_spots_provider.dart';
+import '../../globals/models/spot.dart';
+import '../spots/spots_provider.dart';
 
 final filterProvider = ChangeNotifierProvider<ExploreFilterProvider>(
   (ref) => ExploreFilterProvider(
@@ -27,7 +27,7 @@ class ExploreFilterProvider extends ChangeNotifier {
   List<Filter> get _setOfTagFilters {
     Set<Filter> tags = {};
     for (Spot spot in allSpots) {
-      for (String tag in spot.tags) {
+      for (String tag in spot.content.tags) {
         tags.add(Filter(
             name: tag[0].toUpperCase() + tag.substring(1), filter: false));
       }

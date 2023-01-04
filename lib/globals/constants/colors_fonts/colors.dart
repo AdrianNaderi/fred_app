@@ -13,6 +13,7 @@ class CustomColors {
   static const secondary = CupertinoColors.white;
   static const background = CupertinoColors.white;
   static const grey = Color(0xFFE9E9E9);
+  static const greyText = Color(0xFFAFAFAF);
   static const error = CupertinoColors.systemRed;
 
   static const brand = Color(0xFFFFB931);

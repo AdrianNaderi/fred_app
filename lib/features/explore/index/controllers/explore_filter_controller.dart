@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fred_app/data/explore/explore_filter_provider.dart';
-import 'package:fred_app/data/explore/explore_spots_provider.dart';
+import 'package:fred_app/data/spots/spots_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../globals/models/filter.dart';
-import '../../models/explore.dart';
+import '../../../../globals/models/spot.dart';
 
 final exploreFilterController = ChangeNotifierProvider(
   (ref) => ExploreFilterController(
@@ -29,7 +29,8 @@ class ExploreFilterController extends ChangeNotifier {
     for (Spot spot in allSpots) {
       if (filterNames.isEmpty) {
         filteredSpots = allSpots;
-      } else if (filterNames.any((element) => spot.tags.contains(element))) {
+      } else if (filterNames
+          .any((element) => spot.content.tags.contains(element))) {
         filteredSpots.add(spot);
       }
     }

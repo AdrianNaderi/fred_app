@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fred_app/data/explore/explore_spots_provider.dart';
-import 'package:fred_app/features/explore/models/explore.dart';
+import 'package:fred_app/data/spots/spots_provider.dart';
+import 'package:fred_app/globals/models/spot.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final userVisitedProvider = ChangeNotifierProvider<UserVisitedProvider>(

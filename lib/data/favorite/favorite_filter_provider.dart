@@ -3,9 +3,9 @@ import 'package:fred_app/data/user/user_favorites_provider.dart';
 import 'package:fred_app/data/user/user_visited_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../features/explore/models/explore.dart';
+import '../../globals/models/spot.dart';
 import '../../globals/models/filter.dart';
-import '../explore/explore_spots_provider.dart';
+import '../spots/spots_provider.dart';
 
 final favoriteFilterProvider = ChangeNotifierProvider<FavoriteFilterProvider>(
   (ref) => FavoriteFilterProvider(
@@ -63,7 +63,7 @@ class FavoriteFilterProvider extends ChangeNotifier {
   List<Filter> get _visitedTagFilters {
     Set<Filter> tags = {};
     for (Spot spot in userVisitedSpots) {
-      for (String tag in spot.tags) {
+      for (String tag in spot.content.tags) {
         tags.add(Filter(
             name: tag[0].toUpperCase() + tag.substring(1), filter: false));
       }
@@ -80,7 +80,7 @@ class FavoriteFilterProvider extends ChangeNotifier {
   List<Filter> get _favoriteTagFilters {
     Set<Filter> tags = {};
     for (Spot spot in userFavoriteSpots) {
-      for (String tag in spot.tags) {
+      for (String tag in spot.content.tags) {
         tags.add(Filter(
             name: tag[0].toUpperCase() + tag.substring(1), filter: false));
       }

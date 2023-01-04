@@ -4,9 +4,11 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../../../../../../globals/constants/decoration/border_radius.dart';
 
 class ExploreDetailImage extends ConsumerWidget {
+  final String image;
   final double width;
   const ExploreDetailImage({
     super.key,
+    required this.image,
     required this.width,
   });
 
@@ -16,8 +18,8 @@ class ExploreDetailImage extends ConsumerWidget {
       width: width,
       decoration: BoxDecoration(
         borderRadius: CustomBorderRadius.rDefault,
-        image: const DecorationImage(
-          image: AssetImage("assets/spots/S-010.jpg"),
+        image: DecorationImage(
+          image: AssetImage(image),
           fit: BoxFit.cover,
         ),
       ),

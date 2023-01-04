@@ -4,7 +4,7 @@ import 'package:fred_app/globals/constants/decoration/border_radius.dart';
 import 'package:fred_app/globals/constants/marpad.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../../globals/widgets/text/custom_normaltext.dart';
+import '../../../widgets/text/custom_normal_text.dart';
 
 class AddFunctionalityButton extends ConsumerWidget {
   final Function()? onPressed;

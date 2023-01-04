@@ -4,7 +4,7 @@ import 'package:fred_app/data/favorite/favorite_filter_provider.dart';
 import 'package:fred_app/globals/models/filter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../explore/models/explore.dart';
+import '../../../globals/models/spot.dart';
 
 final favoritesFilterController =
     ChangeNotifierProvider<FavoritesFilterController>(
@@ -37,7 +37,7 @@ class FavoritesFilterController extends ChangeNotifier {
     for (Spot spot in firstTabSpots) {
       if (filterNames.isEmpty) {
         filteredSpots = firstTabSpots;
-      } else if (filterNames.any((element) => spot.tags.contains(element))) {
+      } else if (filterNames.any((element) => spot.content.tags.contains(element))) {
         filteredSpots.add(spot);
       }
     }
@@ -54,7 +54,7 @@ class FavoritesFilterController extends ChangeNotifier {
     for (Spot spot in secondTabSpots) {
       if (filterNames.isEmpty) {
         filteredSpots = secondTabSpots;
-      } else if (filterNames.any((element) => spot.tags.contains(element))) {
+      } else if (filterNames.any((element) => spot.content.tags.contains(element))) {
         filteredSpots.add(spot);
       }
     }
