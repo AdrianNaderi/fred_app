@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../../../../../globals/constants/colors_fonts/colors.dart';
 import '../../../../../../../../globals/constants/decoration/border_radius.dart';
-import '../../../../../../globals/widgets/text/custom_boldtext.dart';
+import '../../../../../../globals/widgets/text/custom_bold_text.dart';
 
 class TopBarSelectionItem extends ConsumerWidget {
   final String text;

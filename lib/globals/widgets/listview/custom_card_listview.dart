@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../constants/marpad.dart';
-import '../text/custom_boldtext.dart';
+import '../text/custom_bold_text.dart';
 
 class CustomCardListviewSeperator extends ConsumerWidget {
   final String title;

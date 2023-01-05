@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
-import 'package:fred_app/data/explore/explore_provider.dart';
-
+import 'package:fred_app/data/spots/spots_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../../../../globals/widgets/text/custom_normaltext.dart';
-import '../../../../../models/explore.dart';
+import '../../../../../../../globals/widgets/text/custom_normal_text.dart';
+import '../../../../../../../globals/models/spot.dart';
 
 class ExploreViewListItemContent extends ConsumerWidget {
   final String id;
@@ -12,7 +11,7 @@ class ExploreViewListItemContent extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    Spot spot = ref.read(mvpexploreProvider).mvpSpots.firstWhere(
+    Spot spot = ref.read(spotsProvider).spots.firstWhere(
           (element) => element.id == id,
         );
     return Expanded(
@@ -21,7 +20,7 @@ class ExploreViewListItemContent extends ConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomNormalText(text: spot.name, size: 18),
-          CustomNormalText(text: "${spot.address} • ${spot.area}", size: 10),
+          CustomNormalText(text: "${spot.location.address} • ${spot.location.area}", size: 10),
         ],
       ),
     );

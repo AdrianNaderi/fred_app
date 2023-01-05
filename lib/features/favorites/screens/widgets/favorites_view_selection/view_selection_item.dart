@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../../../../../globals/constants/colors_fonts/colors.dart';
 import '../../../../../../../../globals/constants/decoration/border_radius.dart';
-import '../../../../../../../../globals/widgets/text/custom_boldtext.dart';
+import '../../../../../globals/widgets/text/custom_bold_text.dart';
 import '../../../controllers/favorites_view_selection_controller.dart';
 
 class TopBarSelectionItem extends ConsumerWidget {
@@ -19,9 +19,6 @@ class TopBarSelectionItem extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final itemState =
         ref.watch(favoritesViewSelectionController).viewState[text]!;
-
-    final Color stateColor =
-        itemState ? CustomColors.brand : CustomColors.brand.withOpacity(0);
     return GestureDetector(
       onTap: () => ref
           .read(favoritesViewSelectionController)
@@ -30,7 +27,7 @@ class TopBarSelectionItem extends ConsumerWidget {
         alignment: Alignment.center,
         padding: CustomPadding.verHorButton,
         decoration: BoxDecoration(
-          color: stateColor,
+          color: itemState ? CustomColors.brand : CustomColors.brand.withOpacity(0),
           borderRadius: CustomBorderRadius.rDefault,
         ),
         child: CustomBoldText(

@@ -2,16 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../../../globals/widgets/spacer.dart';
-import '../../../../../../globals/widgets/text/custom_normaltext.dart';
+import '../../../../../../globals/widgets/text/custom_normal_text.dart';
 
-class MVPExploreDetailButton extends ConsumerWidget {
+class ExploreDetailButton extends ConsumerWidget {
   final String text;
   final double textSize;
   final IconData icon;
   final double iconSize;
   final Color iconColor;
   final Function() onPressed;
-  const MVPExploreDetailButton({
+  const ExploreDetailButton({
     super.key,
     required this.text,
     required this.textSize,

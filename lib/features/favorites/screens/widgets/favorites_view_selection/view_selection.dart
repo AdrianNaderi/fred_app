@@ -15,24 +15,29 @@ class FavoritesViewSelection extends ConsumerWidget {
     final List<String> viewItems =
         ref.read(favoritesViewSelectionController).viewState.keys.toList();
 
-    return Container(
-      margin: CustomPadding.horDefault,
-      padding: CustomPadding.verHor(8, 6),
-      width: double.infinity,
-      decoration: BoxDecoration(
-        borderRadius: CustomBorderRadius.r100,
-        color: CustomColors.brand.withOpacity(0.3),
-      ),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          margin: CustomPadding.horDefault,
+          padding: CustomPadding.verHorButton,
+          decoration: BoxDecoration(
+            borderRadius: CustomBorderRadius.r100,
+            color: CustomColors.brand.withOpacity(0.3),
+          ),
+          child: Column(
             children: [
-              for (String item in viewItems) TopBarSelectionItem(text: item),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  for (String item in viewItems)
+                    TopBarSelectionItem(text: item),
+                ],
+              ),
             ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

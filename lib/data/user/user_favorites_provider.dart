@@ -1,24 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:fred_app/data/spots/spots_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../globals/models/spot.dart';
+
 final userFavoritesProvider = ChangeNotifierProvider<UserFavoritesProvider>(
-  (ref) => UserFavoritesProvider(),
+  (ref) => UserFavoritesProvider(allSpots: ref.read(spotsProvider).spots),
 );
 
 class UserFavoritesProvider extends ChangeNotifier {
+  final List<Spot> allSpots;
+
+  UserFavoritesProvider({
+    required this.allSpots,
+  });
+
   Map<String, List<String>> userFavorites = {
-    "Robin": ["001", "002"],
+    "Robin": ["1", "2"],
   };
 
-  
-
-  List<String> getAllUserFavorites({required String userId}) {
-    return userFavorites.entries
-        .firstWhere((element) => element.key == userId)
-        .value;
+//GETTERS------------------------------------------------------------------------------
+//SPOTS-------------
+  List<Spot> getUserFavoritesSpots({required String userId}) {
+    return allSpots
+        .where((element) => userFavorites.entries
+            .firstWhere((element) => element.key == userId)
+            .value
+            .contains(element.id))
+        .toList();
   }
 
-  bool getSingleUserFavorite(
+  bool getUserFavoriteSpotState(
       {required String userId, required String exploreId}) {
     return userFavorites.entries
         .firstWhere((element) => element.key == userId)
@@ -26,7 +38,9 @@ class UserFavoritesProvider extends ChangeNotifier {
         .contains(exploreId);
   }
 
-  void updateUserFavorite({required String userId, required String exploreId}) {
+  //SETTERS-----------
+  void setUserFavoriteSpotState(
+      {required String userId, required String exploreId}) {
     List<String> favorites = userFavorites.entries
         .firstWhere((element) => element.key == userId)
         .value;

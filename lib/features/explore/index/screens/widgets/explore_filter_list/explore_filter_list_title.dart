@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:fred_app/globals/constants/marpad.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../../../globals/widgets/text/custom_boldtext.dart';
+import '../../../../../../globals/widgets/text/custom_bold_text.dart';
 
 class ExploreFilterListTitle extends ConsumerWidget {
   const ExploreFilterListTitle({super.key});

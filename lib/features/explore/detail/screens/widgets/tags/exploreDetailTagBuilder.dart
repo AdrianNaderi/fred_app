@@ -4,20 +4,24 @@ import 'package:fred_app/features/explore/index/controllers/explore_data_control
 import 'package:fred_app/globals/constants/dimensions.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class MVPExploreDetailTagBuilder extends ConsumerWidget {
+class ExploreDetailTagBuilder extends ConsumerWidget {
   final String id;
-  const MVPExploreDetailTagBuilder({super.key, required this.id});
+  const ExploreDetailTagBuilder({
+    super.key,
+    required this.id,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final exploreTags = ref.read(exploreDataController).getSpotById(id).tags;
+    final tags = ref.read(exploreDataController).getSpotById(id).content.tags;
     return Wrap(
+      alignment: WrapAlignment.spaceBetween,
       spacing: appPadding / 2,
       runSpacing: appPadding / 2,
       children: [
-        for (int i = 0; i < exploreTags.length; i++)
-          MVPExploreDetailTag(
-            tag: exploreTags[i],
+        for (int i = 0; i < tags.length; i++)
+          ExploreDetailTag(
+            tag: tags[i],
           ),
       ],
     );
@@ -30,7 +34,7 @@ class MVPExploreDetailTagBuilder extends ConsumerWidget {
 //         scrollDirection: Axis.horizontal,
 //         shrinkWrap: true,
 //         separatorBuilder: (context, index) => CustomSpacer.w8,
-//         itemBuilder: (context, index) => const MVPExploreDetailTag(),
+//         itemBuilder: (context, index) => const ExploreDetailTag(),
 //         itemCount: 10,
 //       ),
 //     )

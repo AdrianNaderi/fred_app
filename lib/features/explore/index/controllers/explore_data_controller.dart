@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:fred_app/data/explore/explore_provider.dart';
+import 'package:fred_app/data/spots/spots_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../models/explore.dart';
+import '../../../../globals/models/spot.dart';
 
 final exploreDataController = Provider((ref) => ExploreDataController());
 
 class ExploreDataController extends ChangeNotifier {
-  final ExploreData = MVPExploreProvider().mvpSpots;
+  final ExploreData = SpotsProvider().spots;
 
   //GETTERS
   Spot getSpotById(String id) {

@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:fred_app/data/spots/spots_provider.dart';
+import 'package:fred_app/globals/models/spot.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final userVisitedProvider = ChangeNotifierProvider<UserVisitedProvider>(
-  (ref) => UserVisitedProvider(),
+  (ref) => UserVisitedProvider(allSpots: ref.read(spotsProvider).spots),
 );
 
 class UserVisitedProvider extends ChangeNotifier {
-  Map<String, List<String>> userVisited = {
-    "Robin": ["001"],
-  };
+  final List<Spot> allSpots;
+  UserVisitedProvider({
+    required this.allSpots,
+  });
 
-  //GETTERS
-  List<String> getAllUserVisited({required String userId}) {
-    return userVisited.entries
-        .firstWhere((element) => element.key == userId)
-        .value;
+  Map<String, List<String>> userVisited = {
+    "Robin": ["1"],
+  };
+//GETTERS------------------------------------------------------------------------------
+//SPOTS-------------
+  List<Spot> getUserVisitedSpots({required String userId}) {
+    return allSpots
+        .where((element) => userVisited.entries
+            .firstWhere((element) => element.key == userId)
+            .value
+            .contains(element.id))
+        .toList();
   }
 
   bool getSingleUserVisited(
@@ -24,6 +34,7 @@ class UserVisitedProvider extends ChangeNotifier {
         .value
         .contains(exploreId);
   }
+
   //SETTERS
   void setUserVisited({required String userId, required String exploreId}) {
     List<String> visited = userVisited.entries

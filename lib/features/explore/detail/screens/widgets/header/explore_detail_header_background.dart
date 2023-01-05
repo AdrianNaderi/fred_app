@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class MVPExploreDetailHeaderBackground extends ConsumerWidget {
-  const MVPExploreDetailHeaderBackground({
+class ExploreDetailHeaderBackground extends ConsumerWidget {
+  const ExploreDetailHeaderBackground({
     super.key,
   });
 

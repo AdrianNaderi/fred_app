@@ -4,9 +4,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'explore_detail_favorite_button.dart';
 import 'explore_detail_visit_button.dart';
 
-class MVPExploreDetailButtons extends ConsumerWidget {
+class ExploreDetailButtons extends ConsumerWidget {
   final String id;
-  const MVPExploreDetailButtons({
+  const ExploreDetailButtons({
     super.key,
     required this.id,
   });

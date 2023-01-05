@@ -18,14 +18,14 @@ class NamedRoutes {
   //       name: toExplore,
   //       path: toExplore,
   //       builder: (BuildContext context, GoRouterState state) {
-  //         return const MVPTabsScreen();
+  //         return const TabsScreen();
   //       },
   //       routes: <RouteBase>[
   //         GoRoute(
   //           name: toExploreDetail,
   //           path: toExploreDetail,
   //           builder: (BuildContext context, GoRouterState state) {
-  //             return const MVPExploreDetailScreen();
+  //             return const ExploreDetailScreen();
   //           },
   //         ),
   //       ],
@@ -39,7 +39,7 @@ class NamedRoutes {
    // pageBuilder: (context, state) {
             //   return CustomTransitionPage(
             //     key: state.pageKey,
-            //     child: const MVPExploreDetailScreen(),
+            //     child: const ExploreDetailScreen(),
             //     transitionsBuilder:
             //         (context, animation, secondaryAnimation, child) {
             //       // Change the opacity of the screen using a Curve based on the the animation's
