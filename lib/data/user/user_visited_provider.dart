@@ -14,7 +14,7 @@ class UserVisitedProvider extends ChangeNotifier {
   });
 
   Map<String, List<String>> userVisited = {
-    "Robin": ["001"],
+    "Robin": ["1"],
   };
 //GETTERS------------------------------------------------------------------------------
 //SPOTS-------------
@@ -26,7 +26,6 @@ class UserVisitedProvider extends ChangeNotifier {
             .contains(element.id))
         .toList();
   }
-
 
   bool getSingleUserVisited(
       {required String userId, required String exploreId}) {

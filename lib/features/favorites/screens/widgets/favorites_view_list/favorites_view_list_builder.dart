@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:fred_app/features/explore/index/screens/widgets/explore_view_list/explore_view_list_Item.dart';
-import 'package:fred_app/globals/models/spot.dart';
 import 'package:fred_app/features/favorites/controllers/favorites_filter_controller.dart';
 import 'package:fred_app/globals/constants/marpad.dart';
+import 'package:fred_app/globals/models/spot.dart';
 import 'package:fred_app/globals/widgets/spacer.dart';
 import 'package:fred_app/route/app_router.gr.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';

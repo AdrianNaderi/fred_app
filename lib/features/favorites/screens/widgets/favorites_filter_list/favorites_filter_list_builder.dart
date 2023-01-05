@@ -16,7 +16,6 @@ class FavoriteFilterListBuilder extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedView =
         ref.watch(favoritesViewSelectionController).getSelectedViewName();
-    print(selectedView);
 
     List<Filter> tags = selectedView == CMSFavorite.firstTab
         ? ref.watch(favoritesFilterController).firstTabFilters

@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
-import 'package:fred_app/globals/models/category.dart';
-import 'package:fred_app/globals/models/content.dart';
-import 'package:fred_app/globals/models/location.dart';
-import 'package:fred_app/globals/models/media.dart';
+import 'package:fred_app/globals/models/spot/category.dart';
+import 'package:fred_app/globals/models/spot/content.dart';
+import 'package:fred_app/globals/models/spot/location.dart';
+import 'package:fred_app/globals/models/spot/media.dart';
 
 class Spot extends Equatable {
   final String id;

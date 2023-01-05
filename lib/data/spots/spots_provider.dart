@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fred_app/globals/models/category.dart';
-import 'package:fred_app/globals/models/content.dart';
-import 'package:fred_app/globals/models/location.dart';
+import 'package:fred_app/globals/models/spot/category.dart';
+import 'package:fred_app/globals/models/spot/content.dart';
+import 'package:fred_app/globals/models/spot/location.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../globals/models/media.dart';
+import '../../globals/models/spot/media.dart';
 import '../../globals/models/spot.dart';
 
 final spotsProvider = Provider<SpotsProvider>((ref) => SpotsProvider());
@@ -12,7 +12,7 @@ final spotsProvider = Provider<SpotsProvider>((ref) => SpotsProvider());
 class SpotsProvider extends ChangeNotifier {
   final List<Spot> _spots = [
     const Spot(
-      id: "001",
+      id: "1",
       name: "Brännerian",
       nameShort: "",
       content: Content(
@@ -36,19 +36,14 @@ class SpotsProvider extends ChangeNotifier {
           main: "Drinkar", mainImage: "", sub: "Cocktails", subImage: ""),
     ),
     const Spot(
-      id: "002",
+      id: "2",
       name: "A bar called Gemma",
       nameShort: "",
       content: Content(
         title: "Mariannes förbjudna ställe",
         description:
             "Det är den prisbelönte bartendern Hampus Thunholm som står bakom ännu ett nytt barkoncept, denna gång mitt på Sergels torg. Tillsammans med Stureplansgruppen presenterar de en cocktailbar och restaurang vid namn Röda Huset. Sippa på spännande cocktails med svenska ingredienser och ät pizza långt in på kvällen.",
-        tags: [
-          "Marre",
-          "Barre",
-          "Marre",
-          "Barre",
-        ],
+        tags: ["Robin", "Rebin"],
       ),
       media: Media(
         images: [
@@ -66,10 +61,4 @@ class SpotsProvider extends ChangeNotifier {
   ];
 
   List<Spot> get spots => [..._spots];
-
-  List<Spot> getUserFavoriteSpots({required List<String> userFavorites}) {
-    return spots
-        .where((element) => userFavorites.contains(element.id))
-        .toList();
-  }
 }

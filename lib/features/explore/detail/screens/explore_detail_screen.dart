@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fred_app/features/explore/detail/screens/widgets/buttons/explore_detail_buttons.dart';
 import 'package:fred_app/features/explore/detail/screens/widgets/content/explore_detail_content.dart';
-import 'package:fred_app/features/explore/detail/screens/widgets/rating/explore_detail_rating.dart';
+import 'package:fred_app/features/explore/detail/screens/widgets/review/explore_detail_review.dart';
 import 'package:fred_app/features/explore/detail/screens/widgets/tags/exploreDetailTagBuilder.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -23,6 +23,7 @@ class ExploreDetailScreen extends ConsumerWidget {
     return CupertinoPageScaffold(
       child: SingleChildScrollView(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             //header
             ExploreDetailHeader(id: id),
@@ -45,7 +46,7 @@ class ExploreDetailScreen extends ConsumerWidget {
             ExploreDetailImages(id: id),
             CustomSpacer.hDefault,
             //rating
-            const ExploreDetailRating(),
+            ExploreDetailReview(id: id),
           ],
         ),
       ),

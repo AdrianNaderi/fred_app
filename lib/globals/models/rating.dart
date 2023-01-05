@@ -1,20 +1,22 @@
 import 'package:equatable/equatable.dart';
 
-class Rating extends Equatable {
+class Review extends Equatable {
   final String id;
   final String userId;
   final String spotId;
   final double rating;
-  final String review;
+  final String comment;
   final DateTime createdDate;
+  final int visitedWeekDay;
 
-  const Rating({
+  const Review({
     required this.id,
     required this.userId,
     required this.spotId,
     required this.rating,
-    required this.review,
+    required this.comment,
     required this.createdDate,
+    required this.visitedWeekDay,
   });
 
   @override
@@ -23,7 +25,8 @@ class Rating extends Equatable {
         userId,
         spotId,
         rating,
-        review,
+        comment,
         createdDate,
+        visitedWeekDay,
       ];
 }

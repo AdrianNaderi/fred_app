@@ -1,13 +1,16 @@
 import 'package:flutter/cupertino.dart';
+import 'package:fred_app/features/explore/detail/screens/widgets/review/kpi/explore_detail_review_kpi_comments.dart';
+import 'package:fred_app/features/explore/detail/screens/widgets/review/kpi/explore_detail_review_kpi_rating.dart';
 import 'package:fred_app/globals/constants/colors_fonts/colors.dart';
 import 'package:fred_app/globals/constants/decoration/border_radius.dart';
 import 'package:fred_app/globals/constants/marpad.dart';
-import 'package:fred_app/globals/widgets/text/custom_bold_text.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class ExploreDetailRatingKPI extends ConsumerWidget {
-  const ExploreDetailRatingKPI({
+class ExploreDetailReviewKPI extends ConsumerWidget {
+  final String id;
+  const ExploreDetailReviewKPI({
     super.key,
+    required this.id,
   });
 
   @override
@@ -21,9 +24,9 @@ class ExploreDetailRatingKPI extends ConsumerWidget {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: const [
-          CustomBoldText(text: "10 kommentarer", size: 12),
-          CustomBoldText(text: "Vänner 4.6", size: 12),
+        children: [
+          ExploreDetailRatingKPIComments(id: id),
+          ExploreDetailRatingKPIRating(id: id)
         ],
       ),
     );
