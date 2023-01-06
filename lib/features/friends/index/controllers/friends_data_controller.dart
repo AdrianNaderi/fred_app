@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fred_app/data/rating/rating_provider.dart';
 import 'package:fred_app/data/user/user_provider.dart';
-import 'package:fred_app/globals/models/rating.dart';
+import 'package:fred_app/globals/models/review.dart';
 import 'package:fred_app/globals/models/user.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 

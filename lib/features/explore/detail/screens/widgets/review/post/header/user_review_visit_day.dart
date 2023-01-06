@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../../../../../../../../globals/constants/colors_fonts/colors.dart';
 import '../../../../../../../../globals/constants/decoration/border_radius.dart';
 import '../../../../../../../../globals/constants/marpad.dart';
-import '../../../../../../../../globals/models/rating.dart';
+import '../../../../../../../../globals/models/review.dart';
 import '../../../../../../../../globals/widgets/format/date_converter.dart';
 import '../../../../../../../../globals/widgets/text/custom_normal_text.dart';
 

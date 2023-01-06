@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../../../../../globals/constants/colors_fonts/colors.dart';
-import '../../../../../../../../globals/models/rating.dart';
+import '../../../../../../../../globals/models/review.dart';
 import '../../../../../../../../globals/widgets/text/custom_normal_text.dart';
 
 class UserReviewComment extends ConsumerWidget {

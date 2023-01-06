@@ -7,7 +7,7 @@ import 'package:fred_app/globals/constants/marpad.dart';
 import 'package:fred_app/globals/widgets/spacer.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../../../../globals/models/rating.dart';
+import '../../../../../../../globals/models/review.dart';
 import '../../../../../../../globals/models/user.dart';
 import '../../../../controllers/explore_detail_review_controller.dart';
 import 'body/user_review_comment.dart';

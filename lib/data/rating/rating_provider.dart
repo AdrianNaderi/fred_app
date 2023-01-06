@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fred_app/globals/models/rating.dart';
+import 'package:fred_app/globals/models/review.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final reviewProvider = Provider<ReviewProvider>((ref) => ReviewProvider());

@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../data/rating/rating_provider.dart';
 import '../../../../data/user/user_provider.dart';
-import '../../../../globals/models/rating.dart';
+import '../../../../globals/models/review.dart';
 
 final exploreDetailReviewController =
     ChangeNotifierProvider.autoDispose<ExploreDetailReviewController>(

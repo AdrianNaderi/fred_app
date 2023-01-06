@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../../../../../globals/models/rating.dart';
+import '../../../../../../../../globals/models/review.dart';
 import '../../../../../../../../globals/models/user.dart';
 import '../../../../../../../../globals/widgets/format/date_converter.dart';
 import '../../../../../../../../globals/widgets/text/custom_normal_text.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fred_app/data/buckets/buckets_provider.dart';
-import 'package:fred_app/features/friends/buckets_detail/models/buckets.dart';
+import 'package:fred_app/globals/models/buckets.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final bucketDataController = ChangeNotifierProvider<BucketsDataController>(
