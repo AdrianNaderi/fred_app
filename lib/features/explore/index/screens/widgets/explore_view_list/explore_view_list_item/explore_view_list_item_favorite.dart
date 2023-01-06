@@ -13,7 +13,7 @@ class ExploreViewListItemFavorite extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isFavorite = ref
         .watch(userFavoritesProvider)
-        .getUserFavoriteSpotState(userId: "Robin", exploreId: id);
+        .getUserFavoriteSpotState(userId: "1", exploreId: id);
     return CustomIcon(
       icon: isFavorite ? CupertinoIcons.star_fill : CupertinoIcons.star,
       color: CustomColors.brand,

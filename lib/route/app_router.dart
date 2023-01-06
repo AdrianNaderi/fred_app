@@ -2,10 +2,12 @@ import 'package:auto_route/auto_route.dart';
 import 'package:auto_route/empty_router_widgets.dart';
 import 'package:fred_app/features/explore/detail/screens/explore_detail_screen.dart';
 import 'package:fred_app/features/favorites/screens/favorites_screen.dart';
+import 'package:fred_app/features/friends/buckets_detail/screens/buckets_detail_screen.dart';
 import 'package:fred_app/features/friends/index/screens/friends_screen.dart';
 
-import '../features/explore/index/screens/explore_screen.dart';
 import '../features/bottom_tabs/screens/home_screen.dart';
+import '../features/explore/index/screens/explore_screen.dart';
+import '../features/friends/friends_detail/screens/friends_detail_screen.dart';
 
 @CupertinoAutoRouter(
   replaceInRouteName: "Screen,Route",
@@ -42,6 +44,8 @@ import '../features/bottom_tabs/screens/home_screen.dart';
         path: "friendstab",
         children: [
           CupertinoRoute(page: FriendsScreen, path: ""),
+          CupertinoRoute(page: FriendsDetailScreen, path: "friends/detail"),
+          CupertinoRoute(page: BucketsDetailScreen, path: "buckets/detail"),
         ],
       )
     ]),

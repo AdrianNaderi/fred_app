@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fred_app/cms/cms_favorite.dart';
-import 'package:fred_app/data/favorite/favorite_filter_provider.dart';
+import 'package:fred_app/data/filter/favorite_filter_provider.dart';
 import 'package:fred_app/globals/models/filter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 

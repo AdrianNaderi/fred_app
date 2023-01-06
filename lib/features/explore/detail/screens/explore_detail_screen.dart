@@ -24,6 +24,7 @@ class ExploreDetailScreen extends ConsumerWidget {
       child: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //header
             ExploreDetailHeader(id: id),
@@ -31,6 +32,7 @@ class ExploreDetailScreen extends ConsumerWidget {
             Padding(
               padding: CustomPadding.horDefault,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CustomSpacer.hDefault,
                   ExploreDetailButtons(id: id),

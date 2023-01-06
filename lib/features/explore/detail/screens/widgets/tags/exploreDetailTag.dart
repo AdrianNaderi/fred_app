@@ -22,7 +22,7 @@ class ExploreDetailTag extends ConsumerWidget {
         color: CustomColors.brand,
         borderRadius: CustomBorderRadius.rDefault,
       ),
-      child: CustomNormalText(text: tag, size: 14),
+      child: CustomNormalText(text: "#$tag", size: 14),
     );
   }
 }

@@ -11,23 +11,23 @@ final favoriteFilterProvider = ChangeNotifierProvider<FavoriteFilterProvider>(
   (ref) => FavoriteFilterProvider(
     allSpots: ref.read(spotsProvider).spots,
     userFavoriteSpots:
-        ref.watch(userFavoritesProvider).getUserFavoritesSpots(userId: "Robin"),
+        ref.watch(userFavoritesProvider).getUserFavoritesSpots(userId: "1"),
     userVisitedSpots:
-        ref.watch(userVisitedProvider).getUserVisitedSpots(userId: "Robin"),
+        ref.watch(userVisitedProvider).getUserVisitedSpots(userId: "1"),
     firstTabSpots: ref
         .watch(userFavoritesProvider)
-        .getUserFavoritesSpots(userId: "Robin")
+        .getUserFavoritesSpots(userId: "1")
         .where((element) => !ref
             .watch(userVisitedProvider)
-            .getUserVisitedSpots(userId: "Robin")
+            .getUserVisitedSpots(userId: "1")
             .contains(element))
         .toList(),
     secondTabSpots: ref
         .watch(userFavoritesProvider)
-        .getUserFavoritesSpots(userId: "Robin")
+        .getUserFavoritesSpots(userId: "1")
         .where((element) => ref
             .watch(userVisitedProvider)
-            .getUserVisitedSpots(userId: "Robin")
+            .getUserVisitedSpots(userId: "1")
             .contains(element))
         .toList(),
   ),

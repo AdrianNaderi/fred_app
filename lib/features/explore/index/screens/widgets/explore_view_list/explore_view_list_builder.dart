@@ -13,10 +13,13 @@ class ExploreViewListBuilder extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final filteredSpots = ref.watch(exploreFilterController).getFilteredSpots;
-    return Expanded(
+    return Flexible(
+      fit: FlexFit.loose,
       child: ListView.separated(
+        shrinkWrap: true,
         padding: CustomPadding.allDefault,
         scrollDirection: Axis.vertical,
+        physics: const NeverScrollableScrollPhysics(),
         separatorBuilder: (context, index) => CustomSpacer.h8,
         itemCount: filteredSpots.length,
         itemBuilder: (context, index) => GestureDetector(

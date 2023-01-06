@@ -16,6 +16,7 @@ class ExploreDetailTagBuilder extends ConsumerWidget {
     final tags = ref.read(exploreDataController).getSpotById(id).content.tags;
     return Wrap(
       alignment: WrapAlignment.spaceBetween,
+      runAlignment: WrapAlignment.start,
       spacing: appPadding / 2,
       runSpacing: appPadding / 2,
       children: [

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fred_app/data/explore/explore_filter_provider.dart';
+import 'package:fred_app/data/filter/explore_filter_provider.dart';
 import 'package:fred_app/data/spots/spots_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 

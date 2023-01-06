@@ -11,9 +11,9 @@ final favoritesDataController = Provider<FavoritesDataController>(
       allSpots: ref.read(spotsProvider).spots,
       userFavortiesSpots: ref
           .watch(userFavoritesProvider)
-          .getUserFavoritesSpots(userId: "Robin"),
+          .getUserFavoritesSpots(userId: "1"),
       userVisitedSpots:
-          ref.watch(userVisitedProvider).getUserVisitedSpots(userId: "Robin")),
+          ref.watch(userVisitedProvider).getUserVisitedSpots(userId: "1")),
 );
 
 class FavoritesDataController extends ChangeNotifier {

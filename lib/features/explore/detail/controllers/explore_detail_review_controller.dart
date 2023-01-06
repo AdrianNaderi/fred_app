@@ -6,9 +6,10 @@ import '../../../../data/rating/rating_provider.dart';
 import '../../../../data/user/user_provider.dart';
 import '../../../../globals/models/rating.dart';
 
-final exploreDetailReviewController = ChangeNotifierProvider(
+final exploreDetailReviewController =
+    ChangeNotifierProvider.autoDispose<ExploreDetailReviewController>(
   (ref) => ExploreDetailReviewController(
-    allRatings: ref.read(reviewProvider).rating,
+    allRatings: ref.read(reviewProvider).reviews,
     allUsers: ref.read(userProvider).users,
   ),
 );

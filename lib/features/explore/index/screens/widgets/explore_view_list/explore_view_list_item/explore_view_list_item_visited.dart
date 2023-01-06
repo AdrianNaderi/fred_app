@@ -13,7 +13,7 @@ class ExploreViewListItemVisited extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final hasVisited = ref
         .watch(userVisitedProvider)
-        .getSingleUserVisited(userId: "Robin", exploreId: id);
+        .getSingleUserVisited(userId: "1", exploreId: id);
     return CustomIcon(
       icon: hasVisited
           ? CupertinoIcons.check_mark_circled_solid

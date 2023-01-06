@@ -14,7 +14,7 @@ class UserVisitedProvider extends ChangeNotifier {
   });
 
   Map<String, List<String>> userVisited = {
-    "Robin": ["1"],
+    "1": ["1"],
   };
 //GETTERS------------------------------------------------------------------------------
 //SPOTS-------------

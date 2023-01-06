@@ -16,7 +16,7 @@ class UserFavoritesProvider extends ChangeNotifier {
   });
 
   Map<String, List<String>> userFavorites = {
-    "Robin": ["1", "2"],
+    "1": ["1", "2"],
   };
 
 //GETTERS------------------------------------------------------------------------------

@@ -14,11 +14,13 @@ class ExploreDetailRatingKPIRating extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final double rating =
-        ref.read(exploreDetailReviewController).getAvgRatingforSpot(id);
+    final String rating = ref
+        .read(exploreDetailReviewController)
+        .getAvgRatingforSpot(id)
+        .toStringAsFixed(1);
     return Row(
       children: [
-        CustomBoldText(text: "$rating", size: 16),
+        CustomBoldText(text: rating, size: 16),
         CustomSpacer.w8,
         const CustomIcon(icon: CupertinoIcons.star_fill)
       ],

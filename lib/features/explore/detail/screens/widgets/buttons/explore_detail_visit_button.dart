@@ -16,7 +16,7 @@ class ExploreDetailVisitButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final hasVisited = ref
         .watch(userVisitedProvider)
-        .getSingleUserVisited(userId: "Robin", exploreId: id);
+        .getSingleUserVisited(userId: "1", exploreId: id);
 
     return ExploreDetailButton(
       text: hasVisited ? "Har besökt" : "Ej besökt",
@@ -28,7 +28,7 @@ class ExploreDetailVisitButton extends ConsumerWidget {
       iconColor: CustomColors.brand,
       onPressed: () => ref
           .read(userVisitedProvider)
-          .setUserVisited(userId: "Robin", exploreId: id),
+          .setUserVisited(userId: "1", exploreId: id),
     );
   }
 }
